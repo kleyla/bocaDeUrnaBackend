@@ -19,8 +19,8 @@ class CreatePublicacionMesaPartidosTable extends Migration
             $table->unsignedBigInteger('mesa_id')->nullable();
             $table->foreign('mesa_id')->references('id')->on('mesas')->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->unsignedBigInteger('partido_nivel_id')->nullable();
-            $table->foreign('partido_nivel_id')->references('id')->on('partido_nivels')->onDelete('cascade')
+            $table->unsignedBigInteger('partido_id')->nullable();
+            $table->foreign('partido_id')->references('id')->on('partidos')->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->unsignedBigInteger('publicacion_id')->nullable();
             $table->foreign('publicacion_id')->references('id')->on('publicacions')->onDelete('cascade')

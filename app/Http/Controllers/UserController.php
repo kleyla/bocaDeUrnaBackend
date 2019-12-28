@@ -85,6 +85,7 @@ class UserController extends Controller
 
     public function login(Request $request){
         $user = DB::table('users')->where('email', $request->email)->first();
+        //dd($request->email);
         if(\is_null($user)){
             return \response()->json('Usuario no existe', 404);
         }
